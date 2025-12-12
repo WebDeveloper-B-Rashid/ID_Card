@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Hoque Coaching ID Generator</title>
+    <link rel="stylesheet" href="id_card.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="input-panel">
+            <h2>Enter ID Card Details</h2>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" value="Tasfia Tabassum Afra">
+            
+            <label for="idNumber">Test Roll No.:</label>
+            <input type="text" id="idNumber" value="MT-26-00501">
+            
+            <label for="studentGroup">Group:</label>
+            <select id="studentGroup">
+                <option value="Science">Science</option>
+                <option value="Business Studies">Business Studies</option>
+                <option value="Humanities">Humanities</option>
+            </select>
+            
+            <label for="expiry">Session:</label>
+            <input type="text" id="expiry" value="2025 - 2026" readonly>
+
+            <p class="note">**Note:** Photo must be set via CSS/Image URL for true display.</p>
+        </div>
+
+        <div class="id-card-wrapper">
+            <div class="id-card">
+                <div class="card-header">
+                    <span class="logo-placeholder">📘</span>
+                    <h3>E. HOQUE COACHING</h3>
+                </div>
+                
+                <h1 class="card-title">MODEL TEST S. S. C - 2026</h1>
+                
+                <div class="details-section">
+                    <div class="photo-placeholder" id="studentPhoto">
+                        <!-- <img style="width: 190px; height: 190px; border-radius: 8px;" src="https://img.freepik.com/free-photo/closeup-young-female-professional-making-eye-contact-against-colored-background_662251-651.jpg?semt=ais_hybrid&w=740&q=80" alt=""> -->
+
+                        <img style="width: 190px; height: 190px; border-radius: 8px;" src="Images/Tasfa.jpg" alt="Photo">
+                    </div>
+                    
+                    
+                    <div class="text-details">
+                        <p><strong>Name:</strong> <span id="display-name">Tasfia</span></p>
+                        <p><strong>Test Roll No.:</strong> <span id="display-id">MT-26-00501</span></p>
+                        <p><strong>Group:</strong> <span id="display-group">Busness Studies</span></p>
+                        <p><strong>Session:</strong> <span id="display-session">2025 - 2026</span></p>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <div class="signature-area">
+                        <span class="sig-line"></span>
+                        <p>Student Signature</p>
+                    </div>
+                    <div class="signature-area right-align">
+                        <span class="sig-line"></span>
+                        <p>Authorized Signature</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="id_card.js"></script>
+</body>
+</html>
