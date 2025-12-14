@@ -159,7 +159,7 @@ body {
     }
 
     .input-panel {
-        width: 90%; /* Full width up to a max-width */
+        width: 85%; /* Full width up to a max-width */
         max-width: 400px; /* Limit the width for better readability on small screens */
     }
 }
