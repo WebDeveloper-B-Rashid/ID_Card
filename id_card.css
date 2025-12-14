@@ -100,6 +100,10 @@ body {
     text-align: center;
 }
 
+
+
+
+
 .photo-placeholder {
     width: 150px;
     height: 180px;
@@ -142,4 +146,20 @@ body {
     display: block;
     border-top: 1px solid var(--text-color);
     margin-bottom: 5px;
+}
+
+
+
+/* --- Media Query for Mobile/Tablet Layout (Responsiveness) --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .input-panel {
+        width: 100%; /* Full width up to a max-width */
+        max-width: 400px; /* Limit the width for better readability on small screens */
+    }
 }

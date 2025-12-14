@@ -1,0 +1,190 @@
+/* --- Global Reset and Body Styling --- */
+:root {
+    --primary-color: #333;
+    --secondary-color: #007bff;
+    --background-color: #f4f4f9;
+    --card-background: #ffffff;
+    --border-radius: 15px;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Add padding for small screens */
+}
+
+/* --- Main Container and Responsiveness (Flexbox) --- */
+.container {
+    display: flex;
+    gap: 30px; /* Space between the two cards */
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    flex: 1; /* Both cards take equal space on desktop */
+}
+
+/* --- Media Query for Mobile/Tablet Layout (Responsiveness) --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%; /* Full width up to a max-width */
+        max-width: 400px; /* Limit the width for better readability on small screens */
+    }
+}
+
+
+/* --- Form Card Specific Styling --- */
+.form-card h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+
+/* --- ID Card Preview Specific Styling --- */
+
+.id-card {
+    border: 1px solid #ddd; /* Subtle border for definition */
+    padding: 20px;
+    max-width: 400px; /* Make the ID card slightly smaller on large screens */
+    flex: 0 0 400px; /* Keep it a fixed size on desktop for design integrity */
+}
+
+@media (min-width: 769px) {
+    .id-card {
+        flex: 0 0 40%; /* Adjust to be slightly narrower than the form on desktop */
+    }
+}
+
+.id-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.id-header .icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.id-header h3 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.model-test {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.photo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.student-photo {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: label (auto width) and value (remaining space) */
+    gap: 8px 15px; /* Vertical and horizontal gap */
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #444;
+}
+
+.detail-value {
+    color: var(--primary-color);
+}
+
+/* --- Signature Area --- */
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.signature-box {
+    flex-basis: 48%; /* Adjust for spacing */
+    font-size: 0.8rem;
+    color: #666;
+    padding-top: 15px;
+    border-top: 1px solid var(--primary-color); /* The line above the signature text */
+}
+
+.signature-box:first-child {
+    margin-right: 10px;
+}
+.signature-box:last-child {
+    margin-left: 10px;
+}

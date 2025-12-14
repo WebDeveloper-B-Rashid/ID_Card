@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive ID Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <div class="card form-card">
+            <h2>Enter ID Card Details</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="student-name">Student Name:</label>
+                    <input type="text" id="student-name" value="Tasfia Tabassum Afra">
+                </div>
+                
+                <div class="form-group">
+                    <label for="test-roll">Test Roll No.:</label>
+                    <input type="text" id="test-roll" value="MT-26-00501">
+                </div>
+
+                <div class="form-group">
+                    <label for="group">Group:</label>
+                    <select id="group">
+                        <option value="Business Studies" selected>Business Studies</option>
+                        <option value="Science">Science</option>
+                        <option value="Humanities">Humanities</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="session">Session:</label>
+                    <input type="text" id="session" value="2025 - 2026">
+                </div>
+            </form>
+
+            <p class="note">**Note:** Photo must be set via CSS/Image URL for true display.</p>
+        </div>
+
+        <div class="card id-card">
+            <header class="id-header">
+                <span class="icon">&#9776;</span>
+                <h3>E. HOQUE COACHING</h3>
+            </header>
+            
+            <p class="model-test">MODEL TEST S. S. C - 2026</p>
+
+            <div class="photo-container">
+                <img src="../Images/Tasfa.jpg" alt="Student Photo" class="student-photo">
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-label">Name:</div>
+                <div class="detail-value name-value">Tasfia Tabassum Afra</div>
+
+                <div class="detail-label">Test Roll No.:</div>
+                <div class="detail-value">MT-26-00501</div>
+
+                <div class="detail-label">Group:</div>
+                <div class="detail-value">Business Studies</div>
+                
+                <div class="detail-label">Session:</div>
+                <div class="detail-value">2025 - 2026</div>
+            </div>
+
+            <div class="signatures">
+                <div class="signature-box">Student Signature</div>
+                <div class="signature-box">Authorized Signature</div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
